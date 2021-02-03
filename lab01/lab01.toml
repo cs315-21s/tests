@@ -1,0 +1,8 @@
+[[tests]]
+name = "01"
+rubric = 100
+input = ["./replace", "form.txt", "complete.txt", "FIRST", "John", "LAST", "Smith", "CITY", "San Francisco"]
+expected = """
+My name is John Smith
+I live in San Francisco
+"""
