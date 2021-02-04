@@ -6,3 +6,4 @@ expected = """
 My name is John Smith
 I live in San Francisco
 """
+output = "complete.txt"
