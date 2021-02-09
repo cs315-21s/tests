@@ -1,0 +1,71 @@
+[[tests]]
+name = "1"
+input = ["./$project", "-e", "1 + 2"]
+rubric = 10
+expected = """
+EXPR OPER2 PLUS
+..EXPR INTVAL 1
+..EXPR INTVAL 2
+"""
+
+[[tests]]
+name = "2"
+input = ["./$project", "-e", "(1 + 2) * 3"]
+rubric = 10
+expected = """
+EXPR OPER2 MULT
+..EXPR OPER2 PLUS
+....EXPR INTVAL 1
+....EXPR INTVAL 2
+..EXPR INTVAL 3
+"""
+
+[[tests]]
+name = "3"
+input = ["./$project", "-e", "4 * (10 / 5)"]
+rubric = 10
+expected = """
+EXPR OPER2 MULT
+..EXPR INTVAL 4
+..EXPR OPER2 DIV
+....EXPR INTVAL 10
+....EXPR INTVAL 5
+"""
+
+[[tests]]
+name = "4"
+input = ["./$project", "-e", "(2 * (3 + (1 + 1)))"]
+rubric = 10
+expected = """
+EXPR OPER2 MULT
+..EXPR INTVAL 2
+..EXPR OPER2 PLUS
+....EXPR INTVAL 3
+....EXPR OPER2 PLUS
+......EXPR INTVAL 1
+......EXPR INTVAL 1
+"""
+
+[[tests]]
+name = "5"
+input = ["./$project", "-e", "-4 + 3"]
+rubric = 10
+expected = """
+EXPR OPER2 PLUS
+..EXPR OPER1 MINUS
+....EXPR INTVAL 4
+..EXPR INTVAL 3
+"""
+
+[[tests]]
+name = "6"
+input = ["./$project", "-e", "-4 + -4"]
+rubric = 10
+expected = """
+EXPR OPER2 PLUS
+..EXPR OPER1 MINUS
+....EXPR INTVAL 4
+..EXPR OPER1 MINUS
+....EXPR INTVAL 4
+"""
+
