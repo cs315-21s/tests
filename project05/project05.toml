@@ -1,0 +1,11 @@
+[project]
+build = "none"
+
+[[tests]]
+name = "quadratic"
+input = ["java", "-cp", "$digital", "CLI", "test", "$project.dig", "-tests", "$project_tests/quadratic.dig"]
+expected = """
+Use default settings!
+quadratic: passed
+"""
+rubric = 10
