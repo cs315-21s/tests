@@ -1,3 +1,6 @@
+[project]
+build = "none"
+
 [[tests]]
 name = "quadratic"
 input = ["java", "-cp", "$digital", "CLI", "test", "$project.dig", "-tests", "$project_tests/quadratic.dig"]
