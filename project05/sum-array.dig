@@ -8,17 +8,17 @@
       <elementAttributes>
         <entry>
           <string>Label</string>
-          <string>quadratic</string>
+          <string>sum-array</string>
         </entry>
         <entry>
           <string>Testdata</string>
           <testData>
             <dataString>CLR CLK PROG DP MEM B MUL BX TOTAL
-1   x   x    x  x   x x   x  x
+1   x   x    x  x   x      x   x  x
 while (!(DONE))
-0 C 2 x x x x x x
+0 C 3 x x x x x x
 end while
-0 0 x 2 0 0 3 1 6
+0 0 x 7 1 2 0 1 11
 </dataString>
           </testData>
         </entry>

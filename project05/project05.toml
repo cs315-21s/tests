@@ -4,18 +4,35 @@ strip_output = """
 Use default settings!
 """
 
+
+[[tests]]
+name = "fib-rec"
+input = ["java", "-cp", "$digital", "CLI", "test", "$project.dig", "-tests", "$project_tests/fib-rec.dig"]
+expected = """
+fib-rec: passed
+"""
+rubric = 25
+
+[[tests]]
+name = "find-max"
+input = ["java", "-cp", "$digital", "CLI", "test", "$project.dig", "-tests", "$project_tests/find-max.dig"]
+expected = """
+find-max: passed
+"""
+rubric = 25
+
 [[tests]]
 name = "quadratic"
 input = ["java", "-cp", "$digital", "CLI", "test", "$project.dig", "-tests", "$project_tests/quadratic.dig"]
 expected = """
 quadratic: passed
 """
-rubric = 10
+rubric = 25
 
 [[tests]]
-name = "reverse"
-input = ["java", "-cp", "$digital", "CLI", "test", "$project.dig", "-tests", "$project_tests/reverse.dig"]
+name = "sum-array"
+input = ["java", "-cp", "$digital", "CLI", "test", "$project.dig", "-tests", "$project_tests/sum-array.dig"]
 expected = """
-reverse: passed
+sum-array: passed
 """
-rubric = 10
+rubric = 25
